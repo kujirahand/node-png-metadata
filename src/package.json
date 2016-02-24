@@ -1,6 +1,6 @@
 {
   "name": "png-metadata",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "png metadata reader and writer",
   "main": "lib/png-metadata.js",
   "scripts": {
@@ -11,6 +11,10 @@
     "metadata",
     "chunk"
   ],
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/kujirahand/node-png-metadata"
+  },
   "author": "kujirahand",
   "license": "MIT",
   "dependencies": {
