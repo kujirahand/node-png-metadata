@@ -31,6 +31,12 @@ metadata.splitChunk= function (s) {
     var chunk = {};
     // read chunk size
     var size = stoi(s.substr(0, 4));
+    if (size < 0) {
+      // If the size is negative, the data is likely corrupt, but we'll let
+      // the caller decide if any of the returned chunks are usable.
+      // We'll move forward in the file with the minimum chunk length (12 bytes).
+      size = 0;
+    }
     var buf = s.substr(0, size + 12);
     s = s.substr(size + 12); // delete this chunk
     // read chunk data

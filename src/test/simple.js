@@ -27,6 +27,16 @@ describe('test', function () {
     assert.equal(s, s2, "simple.png clone");
   });
 
+  // This image has corrupt data at the end,
+  // but we should be able to read it anyway
+  var scorrupt = png.readFileSync(__dirname + '/garbage_data_after_iend.png');
+
+  it('splitChunkWithGarbageData', function() {
+    assert.doesNotThrow(function() {
+      png.splitChunk(scorrupt);
+    });
+  });
+
 });
 
 
