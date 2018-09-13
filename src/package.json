@@ -1,6 +1,6 @@
 {
   "name": "png-metadata",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "png metadata reader and writer",
   "main": "lib/png-metadata.js",
   "scripts": {
